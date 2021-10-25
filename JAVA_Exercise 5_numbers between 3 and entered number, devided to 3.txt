@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Exercise5 {
+    public static void main(String[] args) {
+
+//        Задача 5: Започвайки от 3, да се изведат на екрана първите n числа, които се
+//        делят на 3. Числата да са разделени със запетая.
+//
+//        Enter n:
+//        22
+//        3,6,9,12,15,18,21
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter n: ");
+        int n = sc.nextInt();
+        int num = 3;
+
+        for (; num <= n; num ++) {
+
+            if ( num % 3 != 0) {
+                continue;
+            }
+            if (num > 3 ) {
+                System.out.print("," + num);
+            } else {
+                System.out.print( num);
+            }
+            }
+
+
+        }
+
+    }

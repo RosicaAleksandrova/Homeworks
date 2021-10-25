@@ -1,0 +1,60 @@
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Exercise3 {
+    private static Collections numbers;
+
+    public static void main(String[] args) {
+
+//        Задача 3: Да се въведат от потребителя 2 числа. И да се изведат на екрана
+//        всички числа от по-малкото до по-голямото
+//
+//        Please enter first number:12
+//        Please enter second number:15
+//        Result: 12 13 14 15
+
+
+        Scanner sc = new Scanner (System.in);
+
+        /*
+
+        System.out.println("Please enter first number: ");
+        double num1 = sc.nextDouble();
+
+        System.out.println("Please enter second number: ");
+        double num2 = sc.nextDouble();
+
+
+         if ( num1 >= num2) {
+            for(;num2 <= num1; num2++) {
+                System.out.println(num2);
+            }
+        }    else {
+                for(;num1 <= num2; num1++) {
+                    System.out.println(num1);
+                }
+            }
+     */
+
+
+
+        System.out.println("Enter first number: ");
+        int min = sc.nextInt();
+
+        System.out.println("Enter first number: ");
+        int max = sc.nextInt();
+
+        int maxHelper = max;
+        if(min>=max) {
+            max=min;
+            min = maxHelper;
+        }
+
+        for (int i=min; i <= max; i++) {
+            System.out.println(i);
+        }
+
+
+
+   }
+}

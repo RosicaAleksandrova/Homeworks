@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Exercise4 {
+    public static void main(String[] args) {
+
+//        Задача 4: Да се прочете число от екрана(конзолата) и да се изведе сборът на
+//        всички числа между 1 и въведеното число.
+//
+//                Enter a number:7
+//                Result 28
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number: ");
+
+        int n = sc.nextInt();
+        int num = 1;
+        int sum = 1;
+
+
+        while ( num < n) {
+
+           num ++;
+           sum += num;
+
+        }
+        System.out.println("Result: " + sum);
+
+    }
+}

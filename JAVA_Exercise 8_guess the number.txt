@@ -1,0 +1,49 @@
+//Задача 8: Напишете игра “Познай числото”:
+//        - Нека програмата генерира на случаен принцип едно число между 1 и 20
+//        (вижте кода в края за генериране на случайни числа).
+//        - След това нека попита потребителя да познае генерираното число.
+//        - Потребителят въвежда числото, което мисли, че е генерирала програмата.
+//        - Ако въведеното число е това, което е генерирано (т.е. потребителят е
+//        познал), то нека програмата да изпише “You Win” и да приключи с
+//        изпълнението си.
+//        - Ако въведеното число е по-малко от генерираното, то нека да изпише, че
+//        търсеното число е по-голямо, и да предложи на потребителя да опита пак с
+//        друго число.
+//        - Ако въведеното число е по-голямо от генерираното, то нека да изпише, че
+//        търсеното число е по-малко, и да предложи на потребителя да опита пак с
+//        друго число.
+//        - Потребителят има 3 опита да познае числото - ако не успее след трите
+//        опита да го познае, то нека програмата да изпише “Game Over” и да
+//        приключи с изпълнението си.
+
+import java.util.Random;
+import java.util.Scanner;
+public class Exercise88 {
+    public static void main(String[] args) {
+
+        Random randomGenerator = new Random();
+        int number = randomGenerator.nextInt(20)+1;
+
+        System.out.println("Guess the number? ");
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 1; i <= 3; i++) {
+            int num = sc.nextInt();
+
+            if (num > number) {
+                System.out.println("The required number is smaller than the number you entered. Try again!");
+            } else if ( num == number) {
+                System.out.println("You win");
+            }  else {
+                System.out.println("The required number is bigger than the number you entered. Try again!");
+            }
+
+        }
+
+        System.out.println("Game over! ");
+
+    }
+
+}
+
+}
